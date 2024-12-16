@@ -8,25 +8,20 @@
 </head>
 <body>
     <header>
-    <nav class="navbar">
-        <div class="logo">Dr. NAVYA NANDURI</div>
-        <div class="menu">
-            <button class="dropdown-toggle" onclick="toggleMenu()">Menu &#9776;</button>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-    <script>
-  function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-  }
-</script>
+        <nav class="navbar">
+            <div class="logo">My Portfolio</div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <button class="dropdown-toggle" onclick="toggleMenu()">Menu &#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
     <section class="hero">
         <div class="hero-content">
             <h1>Your Smile, My Priority</h1>
