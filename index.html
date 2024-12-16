@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr.Navya Nanduri | Endodontist</title>
+    <title>Dr. Navya Nanduri | Endodontist</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
     <header>
-        <nav class="navbar">
-            <div class="logo">Dr.Navya Nanduri</div>
+    <nav class="navbar">
+        <div class="logo">Dr. NAVYA NANDURI</div>
+        <div class="menu">
+            <button class="dropdown-toggle" onclick="toggleMenu()">Menu &#9776;</button>
             <ul class="nav-links">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
+        </div>
+    </nav>
+</header>
+    <script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
     <section class="hero">
         <div class="hero-content">
             <h1>Your Smile, My Priority</h1>
@@ -32,7 +38,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>Hi there! I’m Dr. Navya Nanduri ✨
@@ -40,7 +45,6 @@
         <p>I believe every smile has a story, and I’m here to help yours shine its brightest!</p>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="services">
         <h2>Services I Offer</h2>
         <ul>
@@ -60,7 +64,6 @@
         </ul>
     </section>
 
-    <!-- Achievements Section -->
     <section id="achievements" class="achievements">
         <h2>My Achievements</h2>
         <p>Gold Medalist</p>
@@ -71,14 +74,12 @@
         <p>Management of medical emergencies in dental practice, NPTEL 2022</p>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <p>To schedule a consultation, please contact:</p>
         <p>Email: <a href="mailto:nsrlsrinavya@gmail.com">nsrlsrinavya@gmail.com</a></p>
         <p>Phone: +91 9381102664</p>
 
-        <!-- Contact Form -->
         <div class="contact-form-wrapper">
             <form class="vertical-form" action="https://submit-form.com/osl2AVBaa" method="POST">
                 <label for="first-name">First Name</label>
