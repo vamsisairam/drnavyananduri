@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        if (chatEnded && (userMessage === "hi" || userMessage === "hello" || userMessage === "hey")) {
+        if (chatEnded && (userMessage === "hi"if (chatEnded && (userMessage === "hi" || userMessage === "hello" || userMessage === "hey")) {
             chatEnded = false; 
             botReply("Hello! What’s your name?"); 
-            return; 
+            return;
         }
 
         if (chatEnded) {
-            return; 
+            return;
         }
 
         // Check if this is the very first user input after the initial bot message
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             initialMessageDisplayed = true; 
             if (userMessage === "hi" || userMessage === "hello" || userMessage === "hey") { 
                 botReply("Hello! What’s your name?"); 
-                return; 
+                return;
             }
             return; // Do nothing for other initial inputs
         } 
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Handle greetings at any point in the conversation
         if (userMessage === "hi" || userMessage === "hello" || userMessage === "hey") {
             botReply("Hi there!"); 
-            return; 
+            return;
         } 
 
         if (!userDetails.name) { 
@@ -84,17 +84,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
             botReply(`Nice to meet you, ${userDetails.name}! Can I have your email?`);
-            return; 
+            return;
         } 
 
         if (!userDetails.email) { 
             userDetails.email = userMessage; 
             if (!isValidEmail(userDetails.email)) {
                 botReply("That doesn't look like a valid email. Could you please provide a valid email?");
-                return; 
+                return;
             }
             botReply("Got it! What’s the purpose of your appointment?");
-            return; 
+            return;
         }
 
         userDetails.message = userMessage;
@@ -127,18 +127,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     chatToggle.addEventListener("click", () => {
+        const expandIcon = document.getElementById("chat-toggle-expand");
+        const collapseIcon = document.getElementById("chat-toggle-collapse");
+
         if (!isChatWindowMaximized) {
             chatWindow.style.transform = "translateY(0)";
             chatWindow.style.opacity = "1";
-            chatWindow.style.height = "400px"; 
-            chatToggle.textContent = "[-]"; 
-            isChatWindowMaximized = true; 
+            chatWindow.style.height = "400px";
+
+            expandIcon.style.display = "none"; 
+            collapseIcon.style.display = "block"; 
+
+            isChatWindowMaximized = true;
         } else {
             chatWindow.style.transform = "translateY(100%)";
             chatWindow.style.opacity = "0";
-            chatWindow.style.height = "100px"; 
-            chatToggle.textContent = "[+]"; 
-            isChatWindowMaximized = false; 
+            chatWindow.style.height = "100px";
+
+            expandIcon.style.display = "block"; 
+            collapseIcon.style.display = "none"; 
+
+            isChatWindowMaximized = false;
         }
     });
 
