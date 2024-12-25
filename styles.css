@@ -10,7 +10,7 @@ body {
     background-color: #f4f7fc;
     color: #333;
     line-height: 1.6;
-    font-size: 16px; /* Base font size for better mobile readability */
+    font-size: 16px;
 }
 
 /* Navbar */
@@ -20,15 +20,10 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nav-links.active {
-  display: flex;
-}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    z-index: 1000;
 }
 
 .logo {
@@ -37,66 +32,23 @@ header {
     color: #333;
 }
 
-/* Dropdown Menu */
-.dropdown-menu {
-    position: relative;
-}
-
-.dropdown-toggle {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    display: none; /* Hidden on larger screens */
-}
-
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
 }
 
-.nav-links li a {
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
     text-decoration: none;
     color: #333;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    font-size: 1.1rem;
 }
 
-.nav-links li a:hover {
+.nav-links a:hover {
     color: #007bff;
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dropdown-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
 }
 
 /* Hero Section */
@@ -140,19 +92,6 @@ header {
 .hero-image img {
     max-width: 100%;
     border-radius: 10px;
-}
-
-/* Responsive Hero Section */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content,
-    .hero-image {
-        max-width: 100%;
-    }
 }
 
 /* About Section */
@@ -206,9 +145,41 @@ header {
     color: #007bff;
 }
 
-.achievements p {
+.achievements ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.achievements ul li {
     font-size: 1.1rem;
     color: #555;
+    margin: 10px 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 300px; /* Adjust width as needed */
 }
 
 /* Contact Section */
@@ -230,108 +201,227 @@ header {
     margin-bottom: 20px;
 }
 
-.contact-form-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.vertical-form {
+.contact form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 600px;
+    align-items: center;
+}
+
+.contact input,
+.contact textarea {
     width: 100%;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.vertical-form:hover {
-    transform: scale(1.02);
-}
-
-.vertical-form label {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.vertical-form input,
-.vertical-form textarea {
-    padding: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 100%;
-    transition: border-color 0.3s ease;
 }
 
-.vertical-form input:focus,
-.vertical-form textarea:focus {
+.contact input:focus,
+.contact textarea:focus {
     border-color: #007bff;
     outline: none;
 }
 
-.vertical-form button {
+.contact button {
     background-color: #007bff;
-    color: #fff;
-    padding: 12px 20px;
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.vertical-form button:hover {
+.contact button:hover {
     background-color: #0056b3;
-    transform: scale(1.05);
 }
 
-.vertical-form button:focus {
-    outline: none;
+.contact button:active {
+    background-color: #0056b3;
+}
+
+/* Chatbot Styles */
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px; 
+    height: 50px; 
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 50%; 
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1000; 
+    cursor: pointer;
+}
+
+#chatbot img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+}
+
+#chat-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999; /* Lower z-index to allow chatbot button to be on top */
+    transform: translateY(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    height: 100px; 
+}
+
+#chat-header {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#chat-output {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#chat-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+
+#chat-send {
+  border: none;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    width: 20%;
+    cursor: pointer;
+}
+
+#chat-send:hover {
+    background: #0056b3;
+}
+
+/* Bot and User Messages Styling */
+.bot-message {
+    background: #e6f7ff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.user-message {
+    background: #dcf0f8;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: right;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background: #007bff;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px;
     margin-top: 40px;
 }
 
-/* Additional Responsive Styles */
-/* Additional Responsive Styles */
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 5px;
+    font-size: 1.2rem;
+}
+.menu-toggle {
+    display: none; /* Hide on larger screens */
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none; 
+    }
+
+    .menu-toggle.active + .nav-links {
+        display: block; 
+        position: absolute;
+        top: 60px; /* Adjust top position as needed */
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+/* Responsiveness */
 @media (max-width: 768px) {
-    /* Adjust font sizes for better readability on smaller screens */
-    h1 {
-        font-size: 2rem;
+    .hero {
+        flex-direction: column;
+        text-align: center;
     }
 
-    h2 {
-        font-size: 1.8rem;
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 
-    p {
-        font-size: 1rem;
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
-    /* Adjust spacing and layout for smaller screens */
-    .hero-content,
-    .about,
-    .services,
-    .achievements,
-    .contact {
-        padding: 20px;
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
     }
 
-    /* Adjust form layout for smaller screens */
-    .vertical-form {
-        padding: 20px;
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    #chatbot {
+        width: 90px;
+        height: 90px; 
+    }
+
+    #chatbot img {
+        width: 80px; 
+        height: 80px; 
+    }
+
+    #chat-window {
+        width: 300px; 
     }
 }
