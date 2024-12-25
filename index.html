@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Navya Nanduri | Endodontist</title>
+    <title>Dr.Navya Nanduri | Endodontist</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
     <header>
         <nav class="navbar">
-            <div class="logo">Dr. Navya Nanduri</div>
-            <div class="dropdown-menu" id="dropdownMenu">
-                <button class="dropdown-toggle" onclick="toggleMenu()">Menu &#9776;</button>
-                <ul class="nav-links">
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+            <div class="logo">Dr.Navya Nanduri</div>
+            <button class="menu-toggle">☰</button> 
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <script>
-  function toggleMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-  }
-</script>
+
     <section class="hero">
         <div class="hero-content">
             <h1>Your Smile, My Priority</h1>
-            <p>Welcome to a space where your dental health meets excellence! <br>Looking for personalized dental consultations tailored to your unique needs? You’ve come to the right place!! <br> I’m here to ensure you receive the best guidance on your dental health journey.</p>
+            <p>Welcome to a space where your dental health meets excellence! 
+                I’m here to ensure you receive the best guidance on your dental health journey.</p>
             <a href="#contact" class="btn">Book a Consultation</a>
         </div>
         <div class="hero-image">
-            <img src="https://i.ibb.co/KLWBD3b/navya-image.jpg" alt="Dr. Navya Nanduri">
+            <img src="https://i.ibb.co/KLWBD3b/navya-image.jpg" alt="Dr. Navya Nanduri - Endodontist"> 
         </div>
     </section>
 
     <section id="about" class="about">
         <h2>About Me</h2>
-        <p>Hi there! I’m Dr. Navya Nanduri ✨
-        A passionate dentist on a mission to craft healthy, confident smiles. I earned my BDS from Gitam University (2020) and completed my MDS at Sibar Dental Institute (2024), I was also honored with gold medals in Orthodontics and Microbiology during my BDS. With expertise in endodontics and restorative dentistry, I combine precision, dedication, and a patient-first approach to deliver exceptional dental care. Whether it’s perfecting smiles or restoring dental health, I ensure every treatment reflects my strong clinical foundation and meticulous attention to detail. </p>
-        <p>I believe every smile has a story, and I’m here to help yours shine its brightest!</p>
+        <p>Hi there! I’m Dr. Navya Nanduri ✨. A passionate dentist on a mission to craft healthy, confident smiles. 
+            I earned my BDS from Gitam University (2020) and completed my MDS at Sibar Dental Institute (2024). 
+            I was also honored with gold medals in Orthodontics and Microbiology during my BDS. 
+            With expertise in endodontics and restorative dentistry, I combine precision, dedication, and a patient-first approach to deliver exceptional dental care. 
+            Whether it’s perfecting smiles or restoring dental health, I ensure every treatment reflects my strong clinical foundation and meticulous attention to detail. 
+            I believe every smile has a story, and I’m here to help yours shine its brightest!</p>
     </section>
 
     <section id="services" class="services">
@@ -66,38 +66,62 @@
 
     <section id="achievements" class="achievements">
         <h2>My Achievements</h2>
-        <p>Gold Medalist</p>
-        <p>Co-investigator in research grant provided by Dentsply Sirona</p>
-        <p>Best scientific e-poster, Kaleidoscope, ACDS 2024</p>
-        <p>Best scientific paper, 38th IACDE National conference, Kolkata 2023</p>
-        <p>Best poster of the session, 42nd AP State Dental Conference, Vijayawada 2023</p>
-        <p>Management of medical emergencies in dental practice, NPTEL 2022</p>
+        <ul>
+            <li>Gold Medalist</li>
+            <li>Co-investigator in research grant provided by Dentsply Sirona</li>
+            <li>Best scientific e-poster, Kaleidoscope, ACDS 2024</li>
+            <li>Best scientific paper, 38th IACDE National conference, Kolkata 2023</li>
+            <li>Best poster of the session, 42nd AP State Dental Conference, Vijayawada 2023</li>
+            <li>Management of medical emergencies in dental practice, NPTEL 2022</li>
+        </ul>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Patients Say</h2> 
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"Dr. Nanduri was incredibly patient and explained everything thoroughly. I felt completely at ease during my treatment. Highly recommend!"</p>
+            </div>
+            <div class="testimonial">
+                <p>"I'm so happy with my results! Dr. Nanduri truly cares about her patients and goes the extra mile. Thank you!"</p>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
-        <p>To schedule a consultation, please contact:</p>
         <p>Email: <a href="mailto:nsrlsrinavya@gmail.com">nsrlsrinavya@gmail.com</a></p>
         <p>Phone: +91 9381102664</p>
-
-        <div class="contact-form-wrapper">
-            <form class="vertical-form" action="https://submit-form.com/osl2AVBaa" method="POST">
-                <label for="first-name">First Name</label>
-                <input id="first-name" name="first-name" type="text" placeholder="Enter your first name" required />
-
-                <label for="Email">Email</label>
-                <input id="Email" name="Email" type="text" placeholder="Enter your last name" required />
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <form id="appointment-form" action="https://submit-form.com/osl2AVBaa" method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </section>
 
+    <div id="chatbot">
+        <img src="dentist_bot_logo.png" alt="Chatbot"> 
+        <img id="chat-toggle-expand" src="chat_expanded.png" alt="Expand Chat Window" style="display: none;"> 
+        <img id="chat-toggle-collapse" src="chat_collapsed.png" alt="Collapse Chat Window" style="display: block;"> 
+    </div>
+
+    <div id="chat-window">
+        <div id="chat-header">💬 Appointment Chatbot</div>
+        <div id="chat-output"></div>
+        <input type="text" id="chat-input" placeholder="Type a message..." />
+        <button id="chat-send">Send</button>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Dr. Navya Nanduri | All Rights Reserved</p>
+        <p>&copy; 2024 Dr.Navya Nanduri. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> 
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
